@@ -58,6 +58,10 @@ Return dict with following keys:
 3.2. fixationmodel.version
 --------------------------
 
+Gives the current version string::
+
+    >>> fixationmodel.version
+    '1.2.3'
 
 
 
@@ -106,8 +110,8 @@ Follow `python packaging instructions
     ``fixationmodel.egg-info/PKG_INFO`` file.
 4.  Upload the package with twine:
 
-   1. Sign the dist: ``$ gpg --detach-sign -a dist/fixa...0.1.2*``
-   3. Upload: ``twine upload dist/fixa...0.1.2*`` (will ask your PyPI password)
+    1. Sign the dist: ``$ gpg --detach-sign -a dist/fixa...0.1.2*``
+    2. Upload: ``twine upload dist/fixa...0.1.2*`` (will ask your PyPI password)
 
 5. Package published!
 
