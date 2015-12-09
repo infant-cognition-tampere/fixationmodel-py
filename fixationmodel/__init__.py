@@ -1,7 +1,7 @@
 from numbers import Number
 
 # Semantic versioning
-version = '0.1.1'
+version = '0.1.2'
 
 def variance(it, mean):
     # Biased sample variance

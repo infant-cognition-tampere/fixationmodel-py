@@ -22,7 +22,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='fixationmodel',
-    version='0.1.1',
+    version='0.1.2',
     description='A least-squares offline method to test if tracked gaze points resemble a fixation',
     long_description=long_description,
     url='https://github.com/infant-cognition-tampere/fixationmodel-py',
