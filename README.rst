@@ -9,7 +9,7 @@ Install
 =======
 
 With `pip
-<http://example.com>`_::
+<https://pypi.python.org/pypi/fixationmodel>`_::
 
     $ pip install fixationmodel
 
@@ -18,7 +18,7 @@ With `pip
 Usage
 =====
 
-The data structure **pointlist** is used thoroughly. It is a list of points, where each point is a list [x, y].
+A data structure we call **pointlist** is used for point sequences. It is a list of points, where each point is a list [x, y].
 
 The usage is simple::
 
@@ -83,11 +83,27 @@ Follow `instructions to install pyenv
 
 or comprehensive tests for multiple Python versions in ``tox.ini``::
 
+    $ pyenv local 2.6.9 2.7.10 3.2.6 3.3.6 3.4.3 3.5.0
     $ eval "$(pyenv init -)"
     $ pyenv rehash
     $ tox
 
 
+Publishing to PyPI
+------------------
+
+Follow `python packaging instructions
+<https://python-packaging-user-guide.readthedocs.org/en/latest/distributing/>`_::
+
+1. Create an unpacked sdist: ``$ python setup.py sdist``
+2. Create a universal wheel: ``$ python setup.py bdist_wheel --universal``
+3. Go to `PyPI and register the project by filling the package form
+<https://pypi.python.org/pypi?%3Aaction=submit_form>`_ by uploading ``fixationmodel.egg-info/PKG_INFO`` file.
+4. Upload the package with twine:
+    1. Sign the sdist: ``$ gpg --detach-sign -a dist/fixa...tar.gz``
+    2. Sign the wheel: ``$ gpg --detach-sign -a dist/fixa...whl``
+    3. Upload: ``twine upload dist/*`` (will ask your PyPI password)
+5. Package published!
 
 Versioning
 ==========
