@@ -95,6 +95,8 @@ or comprehensive tests for multiple Python versions in ``tox.ini``::
     $ pyenv rehash
     $ tox
 
+Validate README.rst at `http://rst.ninjs.org/
+<http://rst.ninjs.org/>`_
 
 
 4.3. Publishing to PyPI
